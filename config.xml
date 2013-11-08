@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.vibo.vmall" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>MyVIBO</name>
+    <name>VMall</name>
     <description>
-        這是威寶用戶專屬的APP.
+        威寶電信VMall行動APP
     </description>
     <author email="sunnysun@vibo.com.tw" href="http://www.vibo.com.tw">
         威寶電信
