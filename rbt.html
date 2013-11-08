@@ -1,0 +1,266 @@
+﻿<!DOCTYPE html>
+<html>
+	<title>VMall</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<!--<link rel="stylesheet" href="css/jquery.mobile-1.3.2.min.css" />--><!--JQuery Mobile theme-->
+	<link rel="stylesheet" href="css/jquery.mobile.structure-1.3.2.min.css" />
+	<link rel="stylesheet" href="css/myvibo.min.css" /><!--將JQuery Mobile theme加上 swatch="F"-->
+	<link rel="stylesheet" href="css/jquery.mobile.simpledialog.min.css" /><!--類似alert的dialog，請參考 http://dev.jtsage.com/jQM-SimpleDialog/demos2/ -->
+	<link rel="stylesheet" href="css/style.css" />
+	
+	<script src="js/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="js/initJQueryMobile.js"></script><!--初始化 JQuery Mobile -->
+	<script src="js/jquery.mobile-1.3.2.min.js"></script>
+	<script src="js/jquery.touchSwipe.min.js"></script>
+	<script src="js/jquery.carouFredSel-6.2.1-packed.js"></script>
+	<script src="js/jquery.mobile.simpledialog2.min.js"></script><!--類似alert的dialog，請參考 http://dev.jtsage.com/jQM-SimpleDialog/demos2/ -->
+	<script type="text/javascript" src="js/util.js"></script>
+	<script type="text/javascript" src="js/ga.js"></script><!--Browser用的Google Analytics 追蹤函數-->
+	<script type="text/javascript" src="js/jquery.cookie.js"></script><!--Browser用的Cookie函數，請參考 https://github.com/carhartl/jquery-cookie -->
+	<script type="text/javascript" src="js/jquery.blockUI.js"></script><!--JQuery BlockUI，請參考http://www.malsup.com/jquery/block/ -->
+	
+	<script src="cordova.js"></script><!--給PhoneGap用的-->
+	<script src="GAPlugin.js"></script><!--APP用的Google Analytics 追蹤函數，請參考 https://github.com/phonegap-build/GAPlugin -->
+	<script type="text/javascript" src="js/initPhoneGap.js"></script><!--初始化PhoneGap-->
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+</head>
+
+
+<body>
+
+
+<!-- ****************************** 發燒推薦 ***********************************-->
+<div data-role="page" id="rbtHot">
+	<div data-role="header" data-position="fixed" class="vibo-header">
+		<div class="header-padding"></div>
+		<div data-role="navbar">
+			<ul class="navbar-content-area">
+				<li><a href="#rbtHot">發燒推薦</a></li>
+				<li><a href="#rbtNew">本週最新</a></li>
+				<li><a href="#rbtRank">熱門排行</a></li>
+			</ul>
+		</div><!-- /navbar -->
+	</div><!-- /header -->
+	
+	<div data-role="content" style="margin:0px!important;padding:0px!important;">
+		<div id='CarouselPromotion' style="width:100%;" class="CarouselMenu"><!--首頁促銷訊息-->
+			<div id='CarouselPromotionItems'>
+				<a href='#' data-rel='dialog' onclick='MsgBox("連結功能還沒做啦~~");return false;'><div style='background-image:url(temp/rbt01.jpg);'><span>&nbsp;</span></div></a>
+				<a href='#' data-rel='dialog' onclick='MsgBox("連結功能還沒做啦~~");return false;'><div style='background-image:url(temp/rbt02.jpg);'><span>&nbsp;</span></div></a>
+				<a href='#' data-rel='dialog' onclick='MsgBox("連結功能還沒做啦~~");return false;'><div style='background-image:url(temp/rbt03.jpg);'><span>&nbsp;</span></div></a>
+			</div>
+		</div><!--首頁促銷訊息-->
+
+		<ul data-role="listview" data-inset="true">
+			<li>
+				<a href="#" onclick="doPreviewSong('373027');">
+					<p style="margin-bottom:0px;">擋不住的太陽【偶像劇「就是要你愛上我」片尾曲】--炎亞綸</p>
+				</a>
+			</li>
+			<li>
+				<a href="#" onclick="doPreviewSong('822381');">
+					<p style="margin-bottom:0px;">手掌心【中視古裝大戲－蘭陵王片尾曲】--丁噹</p>
+				</a>
+			</li>
+			<li>
+				<a href="#" onclick="doPreviewSong('852376');">
+					<p style="margin-bottom:0px;">眼淚的名字【民視年度偶像劇『我愛你愛你愛我』插曲】--謝安琪</p>
+				</a>
+			</li>
+		</ul>
+	</div><!-- /content -->
+	
+	<div data-role="footer" data-tap-toggle="false" data-position="fixed" style="border:0px !important;padding:0px !important;margin:0px !important;bottom:0px !important;position:fixed;">
+		<div class="footer-copyright">
+			威寶電信版權所有 Copyright© 2013 All Rights Reserved.
+		</div>
+	</div><!-- /footer -->
+</div><!-- 發燒推薦 -->
+
+<!-- ****************************** 本週最新 ***********************************-->
+<div data-role="page" id="rbtNew">
+	<div data-role="header" data-position="fixed" class="vibo-header">
+		<div class="header-padding"></div>
+		<div data-role="navbar">
+			<ul class="navbar-content-area">
+				<li><a href="#rbtHot">發燒推薦</a></li>
+				<li><a href="#rbtNew">本週最新</a></li>
+				<li><a href="#rbtRank">熱門排行</a></li>
+			</ul>
+		</div><!-- /navbar -->
+	</div><!-- /header -->
+	
+	<div data-role="content">
+		這一頁還沒做~~
+	</div><!-- /content -->
+	
+	<div data-role="footer" data-tap-toggle="false" data-position="fixed" style="border:0px !important;padding:0px !important;margin:0px !important;bottom:0px !important;position:fixed;">
+		<div class="footer-copyright">
+			威寶電信版權所有 Copyright© 2013 All Rights Reserved.
+		</div>
+	</div><!-- /footer -->
+</div><!-- 本週最新 -->
+
+<!-- ****************************** 熱門排行 ***********************************-->
+<div data-role="page" id="rbtRank">
+	<div data-role="header" data-position="fixed" class="vibo-header">
+		<div class="header-padding"></div>
+		<div data-role="navbar">
+			<ul class="navbar-content-area">
+				<li><a href="#rbtHot">發燒推薦</a></li>
+				<li><a href="#rbtNew">本週最新</a></li>
+				<li><a href="#rbtRank">熱門排行</a></li>
+			</ul>
+		</div><!-- /navbar -->
+	</div><!-- /header -->
+	
+	<div data-role="content">
+		這一頁還沒做~~
+	</div><!-- /content -->
+	
+	<div data-role="footer" data-tap-toggle="false" data-position="fixed" style="border:0px !important;padding:0px !important;margin:0px !important;bottom:0px !important;position:fixed;">
+		<div class="footer-copyright">
+			威寶電信版權所有 Copyright© 2013 All Rights Reserved.
+		</div>
+	</div><!-- /footer -->
+</div><!-- 熱門排行 -->
+
+<!-- ****************************** 歌曲試聽 ***********************************-->
+<div data-role="page" id="rbtPreviewSong">
+	<div data-role="header" data-position="fixed" class="vibo-header">
+		<div class="header-padding"></div>
+		<div data-role="navbar">
+			<ul class="navbar-content-area">
+				<li><a href="#rbtHot">發燒推薦</a></li>
+				<li><a href="#rbtNew">本週最新</a></li>
+				<li><a href="#rbtRank">熱門排行</a></li>
+			</ul>
+		</div><!-- /navbar -->
+	</div><!-- /header -->
+	
+	<div data-role="content">
+		<div id="player">
+			<audio controls>
+				<source src="http://rbt.vibo.net.tw/song/TYAM/37/373027_tone.wav">
+			</audio>
+		</div>
+		<p>
+		答鈴名稱：<span id="rbtPreviewSongName"></span><br>
+		歌手：<span id="rbtPreviewSongArtist"></span><br>
+		代碼：<span id="rbtPreviewSongId"></span><br>
+		內容供應商：<span id="rbtPreviewSongVendor"></span><br>
+		歌曲費用：<span id="rbtPreviewSongPrice"></span><br>
+		<input type="button" onclick="MsgBox('這功能還沒做啦');" value="設為我的來電答鈴">
+	</div><!-- /content -->
+	
+	<div data-role="footer" data-tap-toggle="false" data-position="fixed" style="border:0px !important;padding:0px !important;margin:0px !important;bottom:0px !important;position:fixed;">
+		<div class="footer-copyright">
+			威寶電信版權所有 Copyright© 2013 All Rights Reserved.
+		</div>
+	</div><!-- /footer -->
+</div><!-- 歌曲試聽 -->
+
+</body>
+</html>
+<script type="text/javascript"src="js/initPage.js"></script><!--初始化頁面，設定header及footer-->
+
+<script type="text/javascript">
+	var HotCarouselReady	= true;
+	
+	$('#rbtHot').one('pageshow',function () {	//帳單資訊，取得近六期帳單資料
+		var CarouselPromotionHeight = $(window).width()*160/565;	//首頁促銷訊息跑馬燈的高度，以螢幕寬度的30/72計算，若螢幕寬度為480，則跑馬燈高度為200
+		var CarouselPromotionWidth = $(window).width();	//首頁促銷訊息跑馬燈的寬度
+		CarouselPromotionHeight	= Math.ceil(CarouselPromotionHeight);	//無條件進位，取大於這個數的最小整數
+		CarouselPromotionWidth	= Math.ceil(CarouselPromotionWidth);	//無條件進位，取大於這個數的最小整數
+		$('#CarouselPromotion').height(CarouselPromotionHeight);
+		$('#rbtHot #CarouselPromotion #CarouselPromotionItems').css('width', CarouselPromotionWidth);
+		$('#rbtHot #CarouselPromotion #CarouselPromotionItems div').css('width', CarouselPromotionWidth);
+		$('#rbtHot #CarouselPromotion #CarouselPromotionItems img').css('width', CarouselPromotionWidth);
+		$('#rbtHot #CarouselPromotion #CarouselPromotionItems').css('height', CarouselPromotionHeight);
+		$('#rbtHot #CarouselPromotion #CarouselPromotionItems div').css('height', CarouselPromotionHeight);
+		$('#rbtHot #CarouselPromotion #CarouselPromotionItems img').css('height', CarouselPromotionHeight);
+		$('#rbtHot #CarouselPromotion #CarouselPromotionItems').carouFredSel({
+			items: {
+				visible: 1,
+				start: 0
+			},
+			responsive: false,
+			auto: {
+				duration    : 1000,
+				timeoutDuration: 4000,
+				pauseOnHover: true
+			},
+			padding: [0, 0, 0, 0],
+			scroll: {
+				items: 1,
+				duration: 500
+			},
+			swipe: {
+				onMouse: true,
+				onTouch: true
+			}
+		});
+		$('#rbtHot').on({ 'swipeleft' : function(e){ e.preventDefault(); } });
+		$('#rbtHot').on({ 'swiperight' : function(e){ e.preventDefault(); } });
+	});	//$('#rbtHot').one('pageshow', function () {	//帳單資訊，取得近六期帳單資料
+
+	$('#rbtHot').on('pageshow', function () {	//resume 跑馬燈，若不做的話在切換頁面後可能跑馬會停掉
+		if (HotCarouselReady) $('#rbtHot #CarouselPromotion #CarouselPromotionItems').trigger('resume');
+	});	//$('#myRecommandNewEvent').on('pageshow', function () {	//resume 跑馬燈，若不做的話在切換頁面後可能跑馬會停掉
+
+	$('#rbtPreviewSong').on('pagebeforehide',function (event, ui) {	//帳單資訊，取得近六期帳單資料
+		var audio = $("#rbtPreviewSong #player audio");	//audio 播放器
+		if (audio) audio.remove();
+	});
+</script>
+
+<script type="text/javascript">
+	function doPreviewSong(id){
+		var audio = $("#rbtPreviewSong #player audio");	//audio 播放器
+		var newaudio;	//新的歌曲
+		var songsource='';	//新歌曲的URL
+		var name='', artist='', toneid='', vendor='', price='';
+		
+		if (id=='373027'){
+			songsource	= "http://rbt.vibo.net.tw/song/TYAM/37/373027_tone.wav";
+			name		= "擋不住的太陽【偶像劇「就是要你愛上我」片尾曲】";
+			artist		= "炎亞綸";
+			toneid		= "373027";
+			vendor		= "超級美麗鈴";
+			price		= "$15元/次";
+		}
+		if (id=='822381'){
+			songsource	= "http://rbt.vibo.net.tw/song/TAUE/82/822381_tone.wav";
+			name		= "手掌心【中視古裝大戲－蘭陵王片尾曲】";
+			artist		= "丁噹";
+			toneid		= "822381";
+			vendor		= "e7Play美答鈴";
+			price		= "$15元/次";
+		}
+		if (id=='852376'){
+			songsource	= "http://rbt.vibo.net.tw/song/TDIY/85/852376_tone.wav";
+			name		= "眼淚的名字【民視年度偶像劇『我愛你愛你愛我』插曲】";
+			artist		= "謝安琪";
+			toneid		= "852376";
+			vendor		= "YOHO為你鈴";
+			price		= "$15元/次";
+		}
+
+		if (notEmpty(songsource)){	//有歌曲
+			$('#rbtPreviewSong #rbtPreviewSongName').html(name);
+			$('#rbtPreviewSong #rbtPreviewSongArtist').html(artist);
+			$('#rbtPreviewSong #rbtPreviewSongId').html(toneid);
+			$('#rbtPreviewSong #rbtPreviewSongVendor').html(vendor);
+			$('#rbtPreviewSong #rbtPreviewSongPrice').html(price);
+			newaudio = $('<audio controls style="width:100%;">').html('<source src="' + songsource +'">').appendTo('#player');
+			audio.remove();
+			audio = newaudio[0];
+			audio.play();
+			showPage('#rbtPreviewSong');
+		}else{
+			MsgBox('無此歌曲!');
+		}	//if (notEmpty(songsource)){	//有歌曲
+	}	//function doPreviewSong(id){
+</script>

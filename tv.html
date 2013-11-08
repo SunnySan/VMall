@@ -1,0 +1,249 @@
+﻿<!DOCTYPE html>
+<html>
+	<title>VMall</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<!--<link rel="stylesheet" href="css/jquery.mobile-1.3.2.min.css" />--><!--JQuery Mobile theme-->
+	<link rel="stylesheet" href="css/jquery.mobile.structure-1.3.2.min.css" />
+	<link rel="stylesheet" href="css/myvibo.min.css" /><!--將JQuery Mobile theme加上 swatch="F"-->
+	<link rel="stylesheet" href="css/jquery.mobile.simpledialog.min.css" /><!--類似alert的dialog，請參考 http://dev.jtsage.com/jQM-SimpleDialog/demos2/ -->
+	<link rel="stylesheet" href="css/style.css" />
+	
+	<script src="js/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="js/initJQueryMobile.js"></script><!--初始化 JQuery Mobile -->
+	<script src="js/jquery.mobile-1.3.2.min.js"></script>
+	<script src="js/jquery.touchSwipe.min.js"></script>
+	<script src="js/jquery.carouFredSel-6.2.1-packed.js"></script>
+	<script src="js/jquery.mobile.simpledialog2.min.js"></script><!--類似alert的dialog，請參考 http://dev.jtsage.com/jQM-SimpleDialog/demos2/ -->
+	<script type="text/javascript" src="js/util.js"></script>
+	<script type="text/javascript" src="js/ga.js"></script><!--Browser用的Google Analytics 追蹤函數-->
+	<script type="text/javascript" src="js/jquery.cookie.js"></script><!--Browser用的Cookie函數，請參考 https://github.com/carhartl/jquery-cookie -->
+	<script type="text/javascript" src="js/jquery.blockUI.js"></script><!--JQuery BlockUI，請參考http://www.malsup.com/jquery/block/ -->
+	
+	<script src="cordova.js"></script><!--給PhoneGap用的-->
+	<script src="GAPlugin.js"></script><!--APP用的Google Analytics 追蹤函數，請參考 https://github.com/phonegap-build/GAPlugin -->
+	<script type="text/javascript" src="js/initPhoneGap.js"></script><!--初始化PhoneGap-->
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+</head>
+
+
+<body>
+
+
+<!-- ****************************** 精選短片 ***********************************-->
+<div data-role="page" id="rbtHot">
+	<div data-role="header" data-position="fixed" class="vibo-header">
+		<div class="header-padding"></div>
+		<div data-role="navbar">
+			<ul class="navbar-content-area">
+				<li><a href="#rbtHot">精選短片</a></li>
+				<li><a href="#rbtNew">電影預告</a></li>
+				<li><a href="#rbtRank">輕鬆一下</a></li>
+			</ul>
+		</div><!-- /navbar -->
+	</div><!-- /header -->
+	
+	<div data-role="content" style="margin:0px!important;padding:0px!important;">
+		<div id='CarouselPromotion' style="width:100%;" class="CarouselMenu"><!--首頁促銷訊息-->
+			<div id='CarouselPromotionItems'>
+				<a href='#' data-rel='dialog' onclick='MsgBox("連結功能還沒做啦~~");return false;'><div style='background-image:url(temp/rbt01.jpg);'><span>&nbsp;</span></div></a>
+				<a href='#' data-rel='dialog' onclick='MsgBox("連結功能還沒做啦~~");return false;'><div style='background-image:url(temp/rbt02.jpg);'><span>&nbsp;</span></div></a>
+				<a href='#' data-rel='dialog' onclick='MsgBox("連結功能還沒做啦~~");return false;'><div style='background-image:url(temp/rbt03.jpg);'><span>&nbsp;</span></div></a>
+			</div>
+		</div><!--首頁促銷訊息-->
+
+		<ul data-role="listview" data-inset="true">
+			<li>
+				<a href="#" onclick="doPreviewSong('373027');">
+					<p style="margin-bottom:0px;">嘎名人落台語第1集-蔡阿嘎X劉寶傑。喇叭嘴天王LBJ寶傑!!你怎麼說</p>
+				</a>
+			</li>
+			<li>
+				<a href="#" onclick="doPreviewSong('822381');">
+					<p style="margin-bottom:0px;">嘎名人落台語第2集-蔡阿嘎X波多野結衣。台語竟然講的夭壽讚-!</p>
+				</a>
+			</li>
+			<li>
+				<a href="#" onclick="doPreviewSong('852376');">
+					<p style="margin-bottom:0px;">嘎名人落台語第3集-蔡阿嘎X夏于喬。三八阿花吹喇叭也有台語版!!</p>
+				</a>
+			</li>
+		</ul>
+	</div><!-- /content -->
+	
+	<div data-role="footer" data-tap-toggle="false" data-position="fixed" style="border:0px !important;padding:0px !important;margin:0px !important;bottom:0px !important;position:fixed;">
+		<div class="footer-copyright">
+			威寶電信版權所有 Copyright© 2013 All Rights Reserved.
+		</div>
+	</div><!-- /footer -->
+</div><!-- 精選短片 -->
+
+<!-- ****************************** 電影預告 ***********************************-->
+<div data-role="page" id="rbtNew">
+	<div data-role="header" data-position="fixed" class="vibo-header">
+		<div class="header-padding"></div>
+		<div data-role="navbar">
+			<ul class="navbar-content-area">
+				<li><a href="#rbtHot">精選短片</a></li>
+				<li><a href="#rbtNew">電影預告</a></li>
+				<li><a href="#rbtRank">輕鬆一下</a></li>
+			</ul>
+		</div><!-- /navbar -->
+	</div><!-- /header -->
+	
+	<div data-role="content">
+		這一頁還沒做~~
+	</div><!-- /content -->
+	
+	<div data-role="footer" data-tap-toggle="false" data-position="fixed" style="border:0px !important;padding:0px !important;margin:0px !important;bottom:0px !important;position:fixed;">
+		<div class="footer-copyright">
+			威寶電信版權所有 Copyright© 2013 All Rights Reserved.
+		</div>
+	</div><!-- /footer -->
+</div><!-- 電影預告 -->
+
+<!-- ****************************** 輕鬆一下 ***********************************-->
+<div data-role="page" id="rbtRank">
+	<div data-role="header" data-position="fixed" class="vibo-header">
+		<div class="header-padding"></div>
+		<div data-role="navbar">
+			<ul class="navbar-content-area">
+				<li><a href="#rbtHot">精選短片</a></li>
+				<li><a href="#rbtNew">電影預告</a></li>
+				<li><a href="#rbtRank">輕鬆一下</a></li>
+			</ul>
+		</div><!-- /navbar -->
+	</div><!-- /header -->
+	
+	<div data-role="content">
+		這一頁還沒做~~
+	</div><!-- /content -->
+	
+	<div data-role="footer" data-tap-toggle="false" data-position="fixed" style="border:0px !important;padding:0px !important;margin:0px !important;bottom:0px !important;position:fixed;">
+		<div class="footer-copyright">
+			威寶電信版權所有 Copyright© 2013 All Rights Reserved.
+		</div>
+	</div><!-- /footer -->
+</div><!-- 輕鬆一下 -->
+
+<!-- ****************************** 歌曲試聽 ***********************************-->
+<div data-role="page" id="rbtPreviewSong">
+	<div data-role="header" data-position="fixed" class="vibo-header">
+		<div class="header-padding"></div>
+		<div data-role="navbar">
+			<ul class="navbar-content-area">
+				<li><a href="#rbtHot">精選短片</a></li>
+				<li><a href="#rbtNew">電影預告</a></li>
+				<li><a href="#rbtRank">輕鬆一下</a></li>
+			</ul>
+		</div><!-- /navbar -->
+	</div><!-- /header -->
+	
+	<div data-role="content" style="margin:0px!important;padding:0px!important;">
+		<div id="player">
+			<video id="movie" preload controls loop poster="temp/rbt01.jpg">
+				<source src="temp/mv01.mp4" type="video/mp4" />
+				您的瀏覽器不支援HTML 5影片播放標籤<video>格式。
+				Your browser doesn't support the <video> tag.
+			</video>
+		</div>
+			jyrjr
+			<br>
+			end
+	</div><!-- /content -->
+	
+	<div data-role="footer" data-tap-toggle="false" data-position="fixed" style="border:0px !important;padding:0px !important;margin:0px !important;bottom:0px !important;position:fixed;">
+		<div class="footer-copyright">
+			威寶電信版權所有 Copyright© 2013 All Rights Reserved.
+		</div>
+	</div><!-- /footer -->
+</div><!-- 歌曲試聽 -->
+
+</body>
+</html>
+<script type="text/javascript"src="js/initPage.js"></script><!--初始化頁面，設定header及footer-->
+
+<script type="text/javascript">
+	var HotCarouselReady	= true;
+	
+	$('#rbtHot').one('pageshow',function () {	//帳單資訊，取得近六期帳單資料
+		var CarouselPromotionHeight = $(window).width()*160/565;	//首頁促銷訊息跑馬燈的高度，以螢幕寬度的30/72計算，若螢幕寬度為480，則跑馬燈高度為200
+		var CarouselPromotionWidth = $(window).width();	//首頁促銷訊息跑馬燈的寬度
+		CarouselPromotionHeight	= Math.ceil(CarouselPromotionHeight);	//無條件進位，取大於這個數的最小整數
+		CarouselPromotionWidth	= Math.ceil(CarouselPromotionWidth);	//無條件進位，取大於這個數的最小整數
+		$('#CarouselPromotion').height(CarouselPromotionHeight);
+		$('#rbtHot #CarouselPromotion #CarouselPromotionItems').css('width', CarouselPromotionWidth);
+		$('#rbtHot #CarouselPromotion #CarouselPromotionItems div').css('width', CarouselPromotionWidth);
+		$('#rbtHot #CarouselPromotion #CarouselPromotionItems img').css('width', CarouselPromotionWidth);
+		$('#rbtHot #CarouselPromotion #CarouselPromotionItems').css('height', CarouselPromotionHeight);
+		$('#rbtHot #CarouselPromotion #CarouselPromotionItems div').css('height', CarouselPromotionHeight);
+		$('#rbtHot #CarouselPromotion #CarouselPromotionItems img').css('height', CarouselPromotionHeight);
+		$('#rbtHot #CarouselPromotion #CarouselPromotionItems').carouFredSel({
+			items: {
+				visible: 1,
+				start: 0
+			},
+			responsive: false,
+			auto: {
+				duration    : 1000,
+				timeoutDuration: 4000,
+				pauseOnHover: true
+			},
+			padding: [0, 0, 0, 0],
+			scroll: {
+				items: 1,
+				duration: 500
+			},
+			swipe: {
+				onMouse: true,
+				onTouch: true
+			}
+		});
+		$('#rbtHot').on({ 'swipeleft' : function(e){ e.preventDefault(); } });
+		$('#rbtHot').on({ 'swiperight' : function(e){ e.preventDefault(); } });
+	});	//$('#rbtHot').one('pageshow', function () {	//帳單資訊，取得近六期帳單資料
+
+	$('#rbtHot').on('pageshow', function () {	//resume 跑馬燈，若不做的話在切換頁面後可能跑馬會停掉
+		if (HotCarouselReady) $('#rbtHot #CarouselPromotion #CarouselPromotionItems').trigger('resume');
+	});	//$('#myRecommandNewEvent').on('pageshow', function () {	//resume 跑馬燈，若不做的話在切換頁面後可能跑馬會停掉
+
+	$('#rbtPreviewSong').one('pageshow',function () {	//帳單資訊，取得近六期帳單資料
+		var x = $(window).width();
+		var y = x*18/32;
+		$('#rbtPreviewSong #player video').width(x);
+		$('#rbtPreviewSong #player video').height(y);
+	});	//$('#myRecommandNewEvent').on('pageshow', function () {	//resume 跑馬燈，若不做的話在切換頁面後可能跑馬會停掉
+
+	$('#rbtPreviewSong').on('pagebeforehide',function (event, ui) {	//帳單資訊，取得近六期帳單資料
+		var audio = $("#rbtPreviewSong #player video");	//audio 播放器
+		if (audio) audio.remove();
+	});
+</script>
+
+<script type="text/javascript">
+	function doPreviewSong(id){
+		var songsource='';	//新歌曲的URL
+		var audio = $("#rbtPreviewSong #player video");	//audio 播放器
+		
+		if (id=='373027'){
+			songsource	= "http://vshop.vibo.com.tw/temp/vmall/temp/mv01.mp4";
+		}
+		if (id=='822381'){
+			songsource	= "http://vshop.vibo.com.tw/temp/vmall/temp/mv02.mp4";
+		}
+		if (id=='852376'){
+			songsource	= "http://vshop.vibo.com.tw/temp/vmall/temp/mv03.mp4";
+		}
+
+		if (notEmpty(songsource)){	//有歌曲
+			newaudio = $('<video id="movie" preload controls loop poster="http://vshop.vibo.com.tw/temp/vmall/temp/rbt01.jpg" style="width:100%;">').html('<source src="' + songsource +'" type="video/mp4">').appendTo('#player');
+			audio.remove();
+			audio = newaudio[0];
+			audio.play();
+			showPage('#rbtPreviewSong');
+		}else{
+			MsgBox('無此影片!');
+		}	//if (notEmpty(songsource)){	//有歌曲
+	}	//function doPreviewSong(id){
+</script>

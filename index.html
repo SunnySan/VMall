@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html>
+	<title>VMall</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<!--<link rel="stylesheet" href="css/jquery.mobile-1.3.2.min.css" />--><!--JQuery Mobile theme-->
+	<link rel="stylesheet" href="css/jquery.mobile.structure-1.3.2.min.css" />
+	<link rel="stylesheet" href="css/myvibo.min.css" /><!--將JQuery Mobile theme加上 swatch="F"-->
+	<link rel="stylesheet" href="css/jquery.mobile.simpledialog.min.css" /><!--類似alert的dialog，請參考 http://dev.jtsage.com/jQM-SimpleDialog/demos2/ -->
+	<link rel="stylesheet" href="css/style.css" />
+	
+	<script src="js/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="js/initJQueryMobile.js"></script><!--初始化 JQuery Mobile -->
+	<script src="js/jquery.mobile-1.3.2.min.js"></script>
+	<script src="js/jquery.touchSwipe.min.js"></script>
+	<script src="js/jquery.carouFredSel-6.2.1-packed.js"></script>
+	<script src="js/jquery.mobile.simpledialog2.min.js"></script><!--類似alert的dialog，請參考 http://dev.jtsage.com/jQM-SimpleDialog/demos2/ -->
+	<script type="text/javascript" src="js/util.js"></script>
+	<script type="text/javascript" src="js/ga.js"></script><!--Browser用的Google Analytics 追蹤函數-->
+	<script type="text/javascript" src="js/jquery.cookie.js"></script><!--Browser用的Cookie函數，請參考 https://github.com/carhartl/jquery-cookie -->
+	<script type="text/javascript" src="js/jquery.blockUI.js"></script><!--JQuery BlockUI，請參考http://www.malsup.com/jquery/block/ -->
+	
+	<script src="cordova.js"></script><!--給PhoneGap用的-->
+	<script src="GAPlugin.js"></script><!--APP用的Google Analytics 追蹤函數，請參考 https://github.com/phonegap-build/GAPlugin -->
+	<script type="text/javascript" src="js/initPhoneGap.js"></script><!--初始化PhoneGap-->
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+</head>
+
+
+<body>
+
+
+<!-- ****************************** 首頁 ***********************************-->
+<div data-role="page" id="home">
+	<div data-role="header" data-position="fixed" class="vibo-header" style="top:0px!important;position:fixed;">
+		<div class="header-padding"></div>
+	</div><!-- /header -->
+	
+	<div data-role="content" style="border:0px !important;padding:0px !important;margin:0px !important;overflow:hidden !important;">
+		<div class="ui-grid-b">
+			<div class="ui-block-a"><div class="home-icon");"><a rel="external" href="#"><img src="images/home-game.png" /><br>遊戲</a></div></div>
+			<div class="ui-block-b"><div class="home-icon");"><a rel="external" href="#"><img src="images/home-music.png" /><br>音樂</a></div></div>
+			<div class="ui-block-c"><div class="home-icon");"><a rel="external" href="tv.html"><img src="images/home-tv.png" /><br>電視</a></div></div>
+			<div class="ui-block-a"><div class="home-icon");"><a rel="external" href="rbt.html"><img src="images/home-rbt.png" /><br>來電答鈴</a></div></div>
+			<div class="ui-block-b"><div class="home-icon");"><a rel="external" href="#"><img src="images/home-news.png" /><br>新聞</a></div></div>
+			<div class="ui-block-c"><div class="home-icon");"><a rel="external" href="#"><img src="images/home-weather.png" /><br>天氣</a></div></div>
+			<div class="ui-block-a"><div class="home-icon");"><a rel="external" href="#"><img src="images/home-coupon.png" /><br>折價券</a></div></div>
+			<div class="ui-block-b"><div class="home-icon");"><a rel="external" href="#"><img src="images/home-tools.png" /><br>工具</a></div></div>
+			<div class="ui-block-c"><div class="home-icon");"><a rel="external" href="#"><img src="images/home-other.png" /><br>更多...</a></div></div>
+		</div>
+	</div><!-- /content -->
+	
+	<div data-role="footer" data-tap-toggle="false" data-position="fixed" style="border:0px !important;padding:0px !important;margin:0px !important;bottom:0px !important;position:fixed;">
+		<div class="footer-copyright">
+			威寶電信版權所有 Copyright© 2013 All Rights Reserved.
+		</div>
+	</div><!-- /footer -->
+</div><!-- 首頁 -->
+
+
+</body>
+</html>
+
+<script type="text/javascript">
+	$('#home').one('pageshow',function () {	//帳單資訊，取得近六期帳單資料
+		var x = $(window).width();
+		var y = $(window).height()-$("#home div[data-role='header']").outerHeight(true)-$("#home div[data-role='footer']").outerHeight(true);	//全螢幕扣掉 header & footer 的高度
+
+		$('.home-icon').css("margin", "15px");
+		$('.home-icon').css("text-align", "center");
+		$('.home-icon').height((y-90)/3);
+	});	//$('#myBillInfo').one('pageshow', function () {	//帳單資訊，取得近六期帳單資料
+</script>
